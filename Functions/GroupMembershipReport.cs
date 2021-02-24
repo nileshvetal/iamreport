@@ -50,7 +50,7 @@ namespace Gcs.Report
         {
             var groupMembershipReportList = new List<GroupMembershipReportModel>();
             var usersUrl = $"https://vssps.dev.azure.com/{organizationName}/_apis/graph/users?api-version=6.0-preview.1";
-
+			// Getting all users
             var resultObject = SendGetRequest(usersUrl, azureDevopsUsername, perpetualAccessToken);
             if (resultObject == null) return null;
 
